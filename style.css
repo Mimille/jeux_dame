@@ -1,18 +1,62 @@
-table{
-	border : 1px solid black;
+
+body{
+  background-color: mintcream;
 }
+
+
+/* HEADER */
+header{
+  border : 1px solid pink;
+  background-color: pink;
+  height: 12vh;
+  margin-bottom: 5%;
+}
+
+h1{
+  float: left;
+  width: 60%;
+  font-family: cursive;
+  text-align: center;
+}
+
+figure{
+  float: left;
+  width: 10%;
+}
+
+
+
+/*CASES & plateau */
 
 .caseNoir{
 	height : 50px;
 	width : 50px;
-
 }
 
 .caseNoir{
 	background-color : black;
 }
 
-img{
-  height: 40px;
-  width: 40px;
+.tableau{
+  width: 50%;
+}
+
+table{
+  text-align: center;
+  margin-left: 25%;
+}
+
+
+/* IMAGES */
+#vert{
+  height: 30px;
+  width: 30px;
+}
+#rose{
+  height: 30px;
+  width: 30px;
+}
+#logo{
+  height: 80px;
+  width: 80px;
 }
