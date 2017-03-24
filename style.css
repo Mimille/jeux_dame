@@ -48,15 +48,16 @@ table{
 
 
 /* IMAGES */
-#vert{
+img{
   height: 30px;
   width: 30px;
 }
-#rose{
-  height: 30px;
-  width: 30px;
-}
+
 #logo{
   height: 60px;
   width: 60px;
+}
+
+.caseRouge{
+  background-color: red;
 }
