@@ -1,7 +1,16 @@
+/* Déclaration  */
+@ColorCreme : #F8F8F8;
+@DimCaseNoir :50px;
+@DimLogo : 60px;
 
-body{
-  background-color: #F8F8F8;
-}
+
+
+
+
+/* CSS */
+
+body{background-color: @ColorCreme;}
+
 
 
 /* HEADER */
@@ -24,32 +33,24 @@ figure{
   width: 10%;
 }
 
-
-
 /*CASES & plateau */
 
-.caseNoire{
-	background-color: black;
-    height: 40px;
-    width: 40px;
+.caseNoir{
+	height : @DimCaseNoir;
+	width : @DimCaseNoir;
 }
 
-.caseVerte{
-    background-color: lightgreen;
+.caseNoir{
+	background-color : black;
 }
 
-.caseRose{
-    background-color: pink;
-}
-
-#tableau{
+.tableau{
   width: 50%;
-  height: 400px;
 }
 
 table{
   text-align: center;
-  margin-left: 30%;
+  margin-left: 25%;
 }
 
 
@@ -60,8 +61,10 @@ img{
 }
 
 #logo{
-  height: 60px;
-  width: 60px;
+  height: @DimLogo;
+  width: @DimLogo;
 }
 
-
+.caseRouge{
+  background-color: red;
+}
