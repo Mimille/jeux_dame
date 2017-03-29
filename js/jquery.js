@@ -53,6 +53,7 @@ function survolSouris(){
     jeuxPossible();
 }
 
+/**/
 function jeuxPossible(){
   $(this).parent();
 
