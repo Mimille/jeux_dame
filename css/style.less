@@ -1,7 +1,16 @@
+/* Déclaration  */
+@ColorCreme : #F8F8F8;
+@DimCaseNoir :50px;
+@DimLogo : 60px;
 
-body{
-  background-color: #F8F8F8;
-}
+
+
+
+
+/* CSS */
+
+body{background-color: @ColorCreme;}
+
 
 
 /* HEADER */
@@ -24,13 +33,11 @@ figure{
   width: 10%;
 }
 
-
-
 /*CASES & plateau */
 
 .caseNoir{
-	height : 50px;
-	width : 50px;
+	height : @DimCaseNoir;
+	width : @DimCaseNoir;
 }
 
 .caseNoir{
@@ -54,8 +61,8 @@ img{
 }
 
 #logo{
-  height: 60px;
-  width: 60px;
+  height: @DimLogo;
+  width: @DimLogo;
 }
 
 .caseRouge{

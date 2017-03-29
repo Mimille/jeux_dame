@@ -188,7 +188,7 @@ function creationDamier() {
 creationDamier();
 
 //survol de la souris : background red
-function survolSouris(){
+/*function survolSouris(){
     for(var i = 0; i < 21; i++){
         for(var j = 0; j < 21; j++){
 
@@ -213,4 +213,4 @@ function backgroundRouge(){
 //fonction pour que ça redevienne normal lorsque la souris est passée
 function backgroundNormal(){
     document.getElementById(this.id).className = "";
-}
+}*/
