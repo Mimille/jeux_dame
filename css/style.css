@@ -28,22 +28,28 @@ figure{
 
 /*CASES & plateau */
 
-.caseNoir{
-	height : 50px;
-	width : 50px;
+.caseNoire{
+	background-color: black;
+    height: 40px;
+    width: 40px;
 }
 
-.caseNoir{
-	background-color : black;
+.caseVerte{
+    background-color: lightgreen;
 }
 
-.tableau{
+.caseRose{
+    background-color: pink;
+}
+
+#tableau{
   width: 50%;
+  height: 400px;
 }
 
 table{
   text-align: center;
-  margin-left: 25%;
+  margin-left: 30%;
 }
 
 
@@ -58,6 +64,4 @@ img{
   width: 60px;
 }
 
-.caseRouge{
-  background-color: red;
-}
+
