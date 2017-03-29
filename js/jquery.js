@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("body").append(creationDamier());
+    survolSouris();
 });
 
 function creationDamier() {
@@ -16,7 +17,7 @@ function creationDamier() {
                 html += "<td id='cell-c" + casePlusJ + "-l" + casePlusI + "'></td>";
             }else{
                 if(i == 0 || i == 1 || i == 2 || i == 3){
-                    html += "<td class='caseNoire' id=cell-c" + casePlusJ + "-l" + casePlusI + "><img id=vert" + (i + j) + " src='images/vert.png' alt='image'></td>";
+                    html += "<td class='caseNoire' id=cell-c" + casePlusJ + "-l" + casePlusI + "><img class=vert id=vert" + (i + j) + " src='images/vert.png' alt='image'></td>";
                 }else if(i == 6 || i == 7 || i == 8 || i == 9){
                     html += "<td class='caseNoire' id=cell-c" + casePlusJ + "-l" + casePlusI + "><img id=rose" + (i + j) + " src='images/rose.png' alt='image'></td>";
                 }else{
@@ -29,4 +30,15 @@ function creationDamier() {
     html +="</table>";
 
     return html;
+}
+
+//survol de la souris : background red
+function survolSouris(){
+    $(".vert").on("mouseover", function () {
+       $(this).css("background", "red");
+    });
+
+    $(".vert").on("mouseout", function () {
+        $(this).css("background", "");
+    });
 }
