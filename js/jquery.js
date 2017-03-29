@@ -34,18 +34,18 @@ function creationDamier() {
 
 function survolSouris(){
     $(".vert").on("mouseover", function () {
-       $(this).css("background", "red");
+       $(this).parent().css("background", "red");
     });
 
     $(".vert").on("mouseout", function () {
-        $(this).css("background", "");
+        $(this).parent().css("background", "");
     });
 
     $(".rose").on("mouseover", function () {
-        $(this).css("background", "red");
+        $(this).parent().css("background", "red");
     });
 
     $(".rose").on("mouseout", function () {
-        $(this).css("background", "");
+        $(this).parent().css("background", "");
     });
 }
