@@ -1,28 +1,32 @@
 $(document).ready(function(){
     $("body").append(creationDamier());
     survolSouris();
+    jeuxPossible();
 });
 
 function creationDamier() {
     var html = "<table>";
+    var compteur = 0;
 
     for (var i = 0; i < 10 ; i++){
         html += "<tr>";
 
         for(var j = 0; j < 10 ; j++){
-            var casePlusJ = j+1;
-            var casePlusI = i+1;
 
-            if ((j % 2) == (i % 2)){
-                html += "<td id='cell-c" + casePlusJ + "-l" + casePlusI + "'></td>";
-            }else{
-                if(i == 0 || i == 1 || i == 2 || i == 3){
-                    html += "<td class='caseNoire' id=cell-c" + casePlusJ + "-l" + casePlusI + "><img class=vert id=vert" + (i + j) + " src='images/vert.png' alt='image'></td>";
-                }else if(i == 6 || i == 7 || i == 8 || i == 9){
-                    html += "<td class='caseNoire' id=cell-c" + casePlusJ + "-l" + casePlusI + "><img class=rose id=rose" + (i + j) + " src='images/rose.png' alt='image'></td>";
-                }else{
-                    html += "<td class='caseNoire' id=cell-c" + casePlusJ + "-l" + casePlusI + "></td>";
+            if ((i + j) % 2 == 0) {
+                html += "<td id='cell-l" + i + "-c" + j + "'>";
+            }
+            else{
+                if(i == 0 || i == 1 || i == 2 || i == 3) {
+                    html += "<td class='caseNoire' id='cell-l" + i + "-c" + j + "'><img class=vert id=vert" + compteur + " src='images/vert.png' alt='image'>";
                 }
+                else if(i == 6 || i == 7 || i == 8 || i == 9){
+                    html += "<td class='caseNoire' id='cell-l" + i + "-c" + j + "'><img class=rose id=rose" + compteur + " src='images/rose.png' alt='image'>";
+                }
+                else{
+                    html += "<td class='caseNoire' id='cell-l" + i + "-c" + j + "'>";
+                }
+                compteur++;
             }
         }
     }
@@ -36,25 +40,23 @@ function creationDamier() {
 function survolSouris(){
     $(".vert").on("mouseover", function () {
        $(this).parent().css("background", "red");
-    });
-
-    $(".vert").on("mouseout", function () {
+    })
+        .on("mouseout", function () {
         $(this).parent().css("background", "");
     });
 
     $(".rose").on("mouseover", function () {
         $(this).parent().css("background", "red");
-    });
-
-    $(".rose").on("mouseout", function () {
+    })
+        .on("mouseout", function () {
         $(this).parent().css("background", "");
 
     });
-    jeuxPossible();
 }
 
-/**/
 function jeuxPossible(){
-  $(this).parent();
+  $(".vert").on("click", function () {
+      console.log($(this).attr("id"));
+  });
 
 }
