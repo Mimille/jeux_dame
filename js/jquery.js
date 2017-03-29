@@ -32,6 +32,7 @@ function creationDamier() {
     return html;
 }
 
+
 function survolSouris(){
     $(".vert").on("mouseover", function () {
        $(this).parent().css("background", "red");
@@ -47,5 +48,12 @@ function survolSouris(){
 
     $(".rose").on("mouseout", function () {
         $(this).parent().css("background", "");
+
     });
+    jeuxPossible();
+}
+
+function jeuxPossible(){
+  $(this).parent();
+
 }
