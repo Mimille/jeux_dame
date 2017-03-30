@@ -59,15 +59,34 @@ function jeuxPossible(){
       var idligne9 = parseInt($(this).parent().attr("id")) + 9;
       var idligne11 = parseInt($(this).parent().attr("id")) + 11;
 
-      $("#" + idligne9).css("background", "green");
-      $("#"+idligne11).css("background", "green");
-
+      if($("#" + idligne9 + ":empty").val() == '' || $("#" + idligne11 + ":empty").val() == ''){
+          $("#" + idligne9).css("background", "green");
+          $("#"+idligne11).css("background", "green");
+      }
   })
       .on("mouseout", function () {
       var idligne9 = parseInt($(this).parent().attr("id")) + 9;
       var idligne11 = parseInt($(this).parent().attr("id")) + 11;
 
       $("#" + idligne9).css("background", "");
-      $("#"+idligne11).css("background", "");
+      $("#" + idligne11).css("background", "");
   });
+
+
+    $(".rose").on("mouseover", function () {
+        var idligne9 = parseInt($(this).parent().attr("id")) - 9;
+        var idligne11 = parseInt($(this).parent().attr("id")) - 11;
+
+        if($("#" + idligne9 + ":empty").val() == '' || $("#" + idligne11 + ":empty").val() == ''){
+            $("#" + idligne9).css("background", "green");
+            $("#"+idligne11).css("background", "green");
+        }
+    })
+        .on("mouseout", function () {
+            var idligne9 = parseInt($(this).parent().attr("id")) - 9;
+            var idligne11 = parseInt($(this).parent().attr("id")) - 11;
+
+            $("#" + idligne9).css("background", "");
+            $("#" + idligne11).css("background", "");
+        });
 }
