@@ -1,10 +1,71 @@
+var tour = 'rose';
+
 $(document).ready(function () {
   $("body").append(creationDamier());
   survolSouris();
   jeuxPossible();
   SelectionPion();
   DeplacementPions();
+
+  afficherTour();
+  jouerTour();
 });
+
+function afficherTour() {
+  if (tour == 'rose') {
+    $('#tour').text("C'est au rose de jouer !");
+  } else {
+    $('#tour').text("C'est au vert de jouer !");
+  }
+}
+
+function changerTour() {
+  if (tour == 'rose') {
+    tour = 'vert';
+  } else {
+    tour = 'rose';
+  }
+
+  jouerTour();
+}
+
+function jouerTour() {
+  if (tour == 'rose') {
+    tourDesRoses();
+  } else {
+    tourDesVerts();
+  }
+}
+
+function tourDesRoses() {
+  var $jeu = $('#jeu');
+
+  $jeu.find("[id^=rose]").draggable({
+    grid: [50, 50],
+    revert: 'invalid',
+    opacity: .5,
+    stop: function (e, ui) {
+      if(ui.position.left !== ui.originalPosition.left && ui.position.top !== ui.originalPosition.top) {
+        $(this).draggable('destroy');
+      }
+    }
+  });
+}
+
+function tourDesVerts() {
+  var $jeu = $('#jeu');
+
+  $jeu.find("[id^=vert]").draggable({
+    grid: [50, 50],
+    revert: 'invalid',
+    opacity: .5,
+    stop: function (e, ui) {
+      if(ui.position.left !== ui.originalPosition.left && ui.position.top !== ui.originalPosition.top) {
+        $(this).draggable('destroy');
+      }
+    }
+  });
+}
 
 function creationDamier() {
   var html = "<table id='jeu'>";
@@ -105,12 +166,6 @@ function SelectionPion() {
 function DeplacementPions() {
   var $jeu = $("#jeu");
 
-  $jeu.find("[id^=vert], [id^=rose]").draggable({
-    grid: [50, 50],
-    revert: 'invalid',
-    opacity: .5
-  });
-
   $jeu.find('.caseNoire').droppable({
     accept: function ($pion) {
       var $case = $(this);
@@ -141,7 +196,6 @@ function DeplacementPions() {
           height: 24,
           width: 24,
         });
-        $pionAdverse.draggable('destroy');
       }
 
       $(this).append(ui.draggable);
@@ -154,6 +208,10 @@ function DeplacementPions() {
       $jeu.find(".vert, .rose").each(function () {
         $(this).parent().css('background', '');
       });
+
+      changerTour();
+      afficherTour();
+      jouerTour();
     }
   });
 }
