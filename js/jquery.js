@@ -62,7 +62,8 @@ function jeuxPossible(){
       $("#" + idligne9).css("background", "green");
       $("#"+idligne11).css("background", "green");
 
-  }).on("mouseout", function () {
+  })
+      .on("mouseout", function () {
       var idligne9 = parseInt($(this).parent().attr("id")) + 9;
       var idligne11 = parseInt($(this).parent().attr("id")) + 11;
 
