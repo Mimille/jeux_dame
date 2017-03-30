@@ -4,6 +4,7 @@ $(document).ready(function(){
     jeuxPossible();
     SelectionPion();
     DeplacementPions();
+    GestionDeplacement();
 });
 
 function creationDamier() {
@@ -64,6 +65,8 @@ function jeuxPossible(){
       if($("#" + idligne9 + ":empty").val() == '' || $("#" + idligne11 + ":empty").val() == ''){
           $("#" + idligne9).css("background", "green");
           $("#"+idligne11).css("background", "green");
+          $("#" + idligne9).droppable();
+          $("#"+idligne11).droppable();
       }
   })
       .on("mouseout", function () {
@@ -120,14 +123,18 @@ function SelectionPion(){
 }
 
 
-function DeplacementPions(){
-  for(var i =0; i<20; i++){
-    $("#vert"+i).draggable({
-      grid : [51.82 ,51.82]
+
+function DeplacementPions() {
+    $("[id^=vert], [id^=rose] ").draggable({
+      grid: [50, 50],
+      revert: 'invalid'
     });
-    $("#rose"+i).draggable({
-      grid : [50, 50]
-    });
-  }
-  $(".caseNoire").droppable();
+
+    $('.caseNoire').droppable();
+}
+
+
+function GestionDeplacement(){
+
+
 }
