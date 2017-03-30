@@ -18,13 +18,13 @@ function creationDamier() {
             }
             else{
                 if(i == 0 || i == 1 || i == 2 || i == 3) {
-                    html += "<td class='caseNoire' id='cell-l" + i + "-c" + j + "'><img class=vert id=vert" + compteur + " src='images/vert.png' alt='image'>";
+                    html += "<td class='caseNoire' id='" + i + j + "'><img class=vert id=vert" + compteur + " src='images/vert.png' alt='image'>";
                 }
                 else if(i == 6 || i == 7 || i == 8 || i == 9){
-                    html += "<td class='caseNoire' id='cell-l" + i + "-c" + j + "'><img class=rose id=rose" + compteur + " src='images/rose.png' alt='image'>";
+                    html += "<td class='caseNoire' id='" + i + j + "'><img class=rose id=rose" + compteur + " src='images/rose.png' alt='image'>";
                 }
                 else{
-                    html += "<td class='caseNoire' id='cell-l" + i + "-c" + j + "'>";
+                    html += "<td class='caseNoire' id='" + i + j + "'>";
                 }
                 compteur++;
             }
@@ -50,13 +50,23 @@ function survolSouris(){
     })
         .on("mouseout", function () {
         $(this).parent().css("background", "");
-
     });
 }
 
 function jeuxPossible(){
-  $(".vert").on("click", function () {
-      console.log($(this).attr("id"));
-  });
 
+  $(".vert").on("mouseover", function () {
+      var idligne9 = parseInt($(this).parent().attr("id")) + 9;
+      var idligne11 = parseInt($(this).parent().attr("id")) + 11;
+
+      $("#" + idligne9).css("background", "green");
+      $("#"+idligne11).css("background", "green");
+
+  }).on("mouseout", function () {
+      var idligne9 = parseInt($(this).parent().attr("id")) + 9;
+      var idligne11 = parseInt($(this).parent().attr("id")) + 11;
+
+      $("#" + idligne9).css("background", "");
+      $("#"+idligne11).css("background", "");
+  });
 }
