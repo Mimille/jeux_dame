@@ -2,6 +2,7 @@ $(document).ready(function(){
     $("body").append(creationDamier());
     survolSouris();
     jeuxPossible();
+    DeplacementPions();
 });
 
 function creationDamier() {
@@ -89,4 +90,24 @@ function jeuxPossible(){
             $("#" + idligne9).css("background", "");
             $("#" + idligne11).css("background", "");
         });
+}
+
+
+function DeplacementPions(){
+  var count = 0;
+  $(".vert").on("click", function(){
+     count ++ ;
+     if(count == 1){
+       $(this).css("width", "60%");
+       $(this).css("height", "60%");
+       $(this).parent().css("background", "#F4D17B");
+     }
+     else {
+       $(this).css("width", "50%");
+       $(this).css("height", "50%");
+       $(this).parent().css("background", "red");
+       count = 0;
+     }
+     console.log(count);
+  });
 }
