@@ -13,9 +13,9 @@ $(document).ready(function () {
 
 function afficherTour() {
   if (tour == 'rose') {
-    $('#tour').text("C'est au rose de jouer !");
+    $('#tour').text("Tour : Rose").toggleClass("texte");
   } else {
-    $('#tour').text("C'est au vert de jouer !");
+    $('#tour').text("Tour : Vert");
   }
 }
 
@@ -77,7 +77,7 @@ function creationDamier() {
     for (var j = 0; j < 10; j++) {
 
       if ((i + j) % 2 == 0) {
-        html += "<td id='cell-l" + i + "-c" + j + "'>";
+        html += "<td class='caseBlanche' id='cell-l" + i + "-c" + j + "'>";
       }
       else {
         if (i == 0 || i == 1 || i == 2 || i == 3) {

@@ -9,15 +9,19 @@
 
 /* CSS */
 
-body{background-color: @ColorCreme;}
+body{
+  background-color: @ColorCreme;
+  margin: 0;
+  padding: 0;
+}
 
 
 
 /* HEADER */
 header{
-  border : 1px solid pink;
-  background-color: pink;
-  height: 12vh;
+  background:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/mario.png); width:100%;
+  background-size: 27%;
+  height: 20vh;
   margin-bottom: 5%;
 }
 
@@ -26,11 +30,23 @@ h1{
   width: 60%;
   font-family: cursive;
   text-align: center;
+  color: white;
 }
 
 figure{
   float: left;
   width: 10%;
+}
+
+.texte{
+  font-size: 40px;
+  color: white;
+  float: left;
+  width: 5%;
+  margin-top: 14%;
+  -moz-transform: rotate(-5deg);
+  line-height: 105%;
+  margin-left: -4%;
 }
 
 /*CASES & plateau */
@@ -39,6 +55,12 @@ figure{
 	height : @DimCaseNoir;
 	width : @DimCaseNoir;
     background-color : black;
+}
+
+.caseBlanche{
+  height : @DimCaseNoir;
+  width : @DimCaseNoir;
+  background-color : white;
 }
 
 .tableau{
