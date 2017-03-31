@@ -14,7 +14,6 @@ $(document).ready(function () {
 function afficherTour() {
   if (tour == 'rose') {
     $('#tour').text("Tour : Rose").toggleClass("texte");
-
   } else {
     $('#tour').text("Tour : Vert");
   }
