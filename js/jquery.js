@@ -12,10 +12,12 @@ $(document).ready(function () {
 });
 
 function afficherTour() {
+
+
   if (tour == 'rose') {
-    $('#tour').text("Tour : Rose").toggleClass("texte");
+    $('#tour').text("Tour : Rose").addClass("texte");
   } else {
-    $('#tour').text("Tour : Vert");
+    $('#tour').text("Tour : Vert").addClass("texte");
   }
 }
 
