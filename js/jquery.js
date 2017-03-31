@@ -1,7 +1,7 @@
 var tour = 'rose';
 
 $(document).ready(function () {
-  $("body").append(creationDamier());
+  $("#plateau").append(creationDamier());
   survolSouris();
   jeuxPossible();
   SelectionPion();
