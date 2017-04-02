@@ -48,7 +48,7 @@ function tourDesRoses() {
     opacity: .5,
     stop: function (e, ui) {
       if(ui.position.left !== ui.originalPosition.left && ui.position.top !== ui.originalPosition.top) {
-        $(this).draggable('destroy');
+        $(".rose").draggable('destroy');
       }
     }
   });
@@ -63,7 +63,7 @@ function tourDesVerts() {
     opacity: .5,
     stop: function (e, ui) {
       if(ui.position.left !== ui.originalPosition.left && ui.position.top !== ui.originalPosition.top) {
-        $(this).draggable('destroy');
+        $(".vert").draggable('destroy');
       }
     }
   });
