@@ -1,33 +1,15 @@
 /* Déclaration  */
 @ColorCreme : #F8F8F8;
-@DimCaseNoir :50px;
+@DimCase:50px;
 @DimLogo : 60px;
 
 
-
-
+@tiny-screen      : 480px; /*tiny screens media query (less than 480px)*/
+@small-screen     : 768px; /* screens between 481px and 768px* */
+@medium-screen    : 1024px; /* screens between 769px and 1024px*/
+@large-screen     : 1280px; /* screens between 1025px and 1280px*/
 
 /* CSS */
-
-
-body{
-  background-image: url(../images/fond2.png);
-  margin: 0;
-  padding: 0;
-  color : white;
-
-}
-
-.master{
-  background-color:rgba(0, 0, 0, 0.5);
-}
-
-footer{
-  height: 15vh;
-}
-
-
-
 
 /* HEADER */
 header{
@@ -50,7 +32,7 @@ figure{
 }
 
 .texte{
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   float: left;
   width: 5%;
@@ -65,23 +47,99 @@ figure{
   width: 60%;
   margin-left: 28%;
 }
+
+
+
+/* Plateau */
+
+.plateau{
+  @media (min-width:@large-screen){
+    .caseNoire{
+    	height : @DimCase;
+    	width : @DimCase;
+      background-color : black;
+    }
+    .caseBlanche{
+      height : @DimCase;
+      width : @DimCase;
+      background-color : white;
+    }
+  }
+  @media (max-width: @tiny-screen){
+    .caseNoire{
+    	height : 20px;
+    	width : 20px;
+      background-color : black;
+    }
+    .caseBlanche{
+      height : 20px;
+      width : 20px;
+      background-color : white;
+    }
+  }
+  @media (min-width: @tiny-screen)and(max-width: @small-screen){
+    .caseNoire{
+    	height : 30px;
+    	width : 30px;
+      background-color : black;
+    }
+    .caseBlanche{
+      height : 30px;
+      width : 30px;
+      background-color : white;
+    }
+  }
+  @media (min-width: @small-screen)and(max-width: @medium-screen){
+    .caseNoire{
+      height : 40px;
+      width : 40px;
+      background-color : black !important;
+    }
+    .caseBlanche{
+      height : 40px;
+      width : 40px;
+      background-color : white;
+    }
+  }
+  @media (min-width: @medium-screen) and (max-width:@large-screen){
+    .caseNoire{
+      height : 50px;
+      width : 50px;
+      background-color : black;
+    }
+    .caseBlanche{
+      height : 50px;
+      width : 50px;
+      background-color : white;
+    }
+  }
+
+}
+
+#plateau{
+  .plateau;
+}
+
+
+
+body{
+  background-image: url("../images/fond2.png");
+  margin: 0;
+  padding: 0;
+  color : white;
+}
+
+.master{
+  background-color:rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+
+}
+
+footer{
+  height: 15vh;
+}
+
 /*CASES & plateau */
-
-.caseNoire{
-	height : @DimCaseNoir;
-	width : @DimCaseNoir;
-    background-color : black;
-}
-
-.caseBlanche{
-  height : @DimCaseNoir;
-  width : @DimCaseNoir;
-  background-color : white;
-}
-
-.tableau{
-  width: 50%;
-}
 
 table{
   text-align: center;
@@ -99,11 +157,6 @@ td{
 img{
   height: 50%;
   width: 50%;
-}
-
-.logo{
-  height: @DimLogo;
-  width: @DimLogo;
 }
 
 .caseRouge{
