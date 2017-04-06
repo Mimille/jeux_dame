@@ -4,7 +4,6 @@ $(document).ready(function () {
   $("#plateau").append(creationDamier());
   survolSouris();
   jeuxPossible();
-  SelectionPion();
   DeplacementPions();
 
   afficherTour();
@@ -139,32 +138,6 @@ function jeuxPossible() {
 }
 
 
-function SelectionPion() {
-  /*var count = 0;
-
-   $(".vert").on("click", function(){
-   count ++ ;
-   var idligne9 = parseInt($(this).parent().attr("id")) + 9;
-   var idligne11 = parseInt($(this).parent().attr("id")) + 11;
-   if($("#" + idligne9 + ":empty").val() == '' || $("#" + idligne11 + ":empty").val() == ''){
-   if(count == 1){
-   $(this).css("width", "60%");
-   $(this).css("height", "60%");
-   $(this).parent().css("background", "#F4D17B");
-   }
-   else  {
-   $(this).css("width", "50%");
-   $(this).css("height", "50%");
-   $(this).parent().css("background", "red");
-   count = 0;
-   }
-   }
-
-   console.log(count);
-   });*/
-}
-
-
 function DeplacementPions() {
   var $jeu = $("#jeu");
 
@@ -186,7 +159,6 @@ function DeplacementPions() {
 
       if (!$case.is(':empty')) {
         var $pionAdverse = $case.find(':first');
-        console.log(ui.draggable.attr('id') + ' vient de prendre ' + $pionAdverse.attr('id'));
 
         if (/^vert/.test($pionAdverse.attr('id'))) {
           $('#score-roses').append($pionAdverse);
