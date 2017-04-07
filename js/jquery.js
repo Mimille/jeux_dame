@@ -10,8 +10,14 @@ $(document).ready(function () {
   jouerTour();
 });
 
-function afficherTour() {
+var cptJ1 = 0;
+    function compteurJ1() {
+        cptJ1 ++;
+        $('#timerJ1').text("Timer: " + cptJ1 +" s");
+    }
+    var cpt1 = setInterval(compteurJ1, 1000);
 
+function afficherTour() {
   if (tour == 'rose') {
       $('#tour img:last-child').remove();
       $('#tour').append("<img src='images/lakitu_rose.png'>");
@@ -27,7 +33,6 @@ function changerTour() {
   } else {
     tour = 'rose';
   }
-
   jouerTour();
 }
 
@@ -41,7 +46,6 @@ function jouerTour() {
 
 function tourDesRoses() {
   var $jeu = $('#jeu');
-
   $jeu.find("[id^=rose]").draggable({
     grid: [50, 50],
     revert: 'invalid',
@@ -56,7 +60,6 @@ function tourDesRoses() {
 
 function tourDesVerts() {
   var $jeu = $('#jeu');
-
   $jeu.find("[id^=vert]").draggable({
     grid: [50, 50],
     revert: 'invalid',
@@ -72,12 +75,9 @@ function tourDesVerts() {
 function creationDamier() {
   var html = "<table id='jeu'>";
   var compteur = 0;
-
   for (var i = 0; i < 10; i++) {
     html += "<tr>";
-
     for (var j = 0; j < 10; j++) {
-
       if ((i + j) % 2 == 0) {
         html += "<td class='caseBlanche' id='cell-l" + i + "-c" + j + "'>";
       }
@@ -95,9 +95,7 @@ function creationDamier() {
       }
     }
   }
-
   html += "</table>";
-
   return html;
 }
 

@@ -11,11 +11,10 @@
 
 /* CSS */
 #html_jeu, .body_jeu{
-  background-image: url("../images/fond2.png");
+  background-image: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/07/white-background.jpg");
   margin: 0; padding: 0; // annulation des marges
 }
 .master{
-  background-color:rgba(0, 0, 0, 0.5);
   min-height: 100vh;
 }
 
@@ -23,7 +22,6 @@
 .jeu{
     height: 80px;
     margin-bottom: 20px;
-
 }
 
 /*.texte{
@@ -39,7 +37,7 @@
 .navjeu{
   margin: 0; padding: 0; // annulation des marges
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 60px;
   width: 100%;
 }
@@ -54,7 +52,6 @@ a{
   font-size: 20px;
   font-family: cursive;
 }
-
 /* Plateau */
 
 .plateau{
@@ -124,13 +121,27 @@ a{
   .plateau;
   margin-top: 100px;
 }
+#jeu{
+  box-shadow: 0px 4px 15px 0px #333333;
+}
 
 figure{
   float: left;
   width: 10%;
 }
-p{
-  color: white;
+#pion_vert{
+  color : #156715;
+  font-weight: bold;
+  font-family: cursive;
+}
+#pion_rose{
+  color : #921E5F;
+  font-weight: bold;
+  font-family: cursive;
+}
+#timerJ1{
+  color : pink;
+  margin-left: 40%;
 }
 #tour{
   width: 40%;
@@ -144,9 +155,9 @@ p{
   color: #F4D17B;
   text-decoration: underline;
 }
-#score-verts, #score-roses{
-  height: 80px;
-  margin-left: 20%
+#score-verts{
+  height: 90px;
+  margin-left: 25%
 }
 
 /*CASES & plateau */
