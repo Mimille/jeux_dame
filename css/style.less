@@ -10,11 +10,9 @@
 @large-screen     : 1280px; /* screens between 1025px and 1280px*/
 
 /* CSS */
-.body_jeu{
+#html_jeu, .body_jeu{
   background-image: url("../images/fond2.png");
-  color : white;
   margin: 0; padding: 0; // annulation des marges
-  overflow: hidden;
 }
 .master{
   background-color:rgba(0, 0, 0, 0.5);
@@ -27,17 +25,17 @@
     margin-bottom: 20px;
 
 }
-.texte{
-  font-size: 20px;
+
+/*.texte{
   color: white;
   float: left;
   width: 5%;
   margin-top: 14.5%;
   -moz-transform: rotate(-5deg);
   line-height: 130%;
-  margin-left: -4%;
+  margin-left: 10%;
   font-family: cursive;
-}
+}*/
 .navjeu{
   margin: 0; padding: 0; // annulation des marges
   overflow: hidden;
@@ -71,6 +69,10 @@ a{
       width : @DimCase;
       background-color : white;
     }
+    #scores{
+      width: 20%;
+      margin-left: 20%;
+    }
   }
   @media (max-width: @tiny-screen){
     .caseNoire{
@@ -82,6 +84,10 @@ a{
       height : 20px;
       width : 20px;
       background-color : white;
+    }
+    #scores{
+      width: 40%;
+      margin-left: 25%;
     }
   }
   @media (min-width: @tiny-screen)and(max-width: @small-screen){
@@ -95,6 +101,10 @@ a{
       width : 30px;
       background-color : white;
     }
+    #scores{
+      width: 60%;
+      margin-left: 25%;
+    }
   }
   @media (min-width: @small-screen)and(max-width: @medium-screen){
     .caseNoire{
@@ -106,6 +116,10 @@ a{
       height : 40px;
       width : 40px;
       background-color : white;
+    }
+    #scores{
+      width: 70%;
+      margin-left: 25%;
     }
   }
   @media (min-width: @medium-screen) and (max-width:@large-screen){
@@ -119,6 +133,10 @@ a{
       width : 50px;
       background-color : white;
     }
+    #scores{
+      width: 50%;
+      margin-left: 15%;
+    }
   }
 
 }
@@ -131,11 +149,10 @@ figure{
   float: left;
   width: 10%;
 }
-
-#scores{
-  width: 80%;
-  margin-left: 25%;
+p{
+  color: white;
 }
+
 
 .selectionnee{
   color: #C57C11;

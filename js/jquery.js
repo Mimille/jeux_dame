@@ -14,9 +14,9 @@ function afficherTour() {
 
 
   if (tour == 'rose') {
-    $('#tour').text("Tour : Rose").addClass("texte");
+    $('#tour').append("<img src='images/lakitu_rose.png'>");
   } else {
-    $('#tour').text("Tour : Vert").addClass("texte");
+    $('#tour').append("<img src='images/lakitu_vert.png'>");
   }
 }
 
