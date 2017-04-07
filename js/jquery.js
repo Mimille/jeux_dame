@@ -12,11 +12,12 @@ $(document).ready(function () {
 
 function afficherTour() {
 
-
   if (tour == 'rose') {
-    $('#tour').append("<img src='images/lakitu_rose.png'>");
+      $('#tour img:last-child').remove();
+      $('#tour').append("<img src='images/lakitu_rose.png'>");
   } else {
-    $('#tour').append("<img src='images/lakitu_vert.png'>");
+      $('#tour img:last-child').remove();
+      $('#tour').append("<img src='images/lakitu_vert.png'>");
   }
 }
 
