@@ -10,27 +10,23 @@
 @large-screen     : 1280px; /* screens between 1025px and 1280px*/
 
 /* CSS */
+.body_jeu{
+  background-image: url("../images/fond2.png");
+  color : white;
+  margin: 0; padding: 0; // annulation des marges
+  overflow: hidden;
+}
+.master{
+  background-color:rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+}
 
 /* HEADER */
-header{
-  background-size: 27%;
-  height: 10vh;
-  margin-bottom: 5%;
-}
+.jeu{
+    height: 80px;
+    margin-bottom: 20px;
 
-h1{
-  float: left;
-  width: 60%;
-  font-family: cursive;
-  text-align: center;
-  color: black;
 }
-
-figure{
-  float: left;
-  width: 10%;
-}
-
 .texte{
   font-size: 20px;
   color: white;
@@ -42,13 +38,24 @@ figure{
   margin-left: -4%;
   font-family: cursive;
 }
-
-#scores{
-  width: 60%;
-  margin-left: 28%;
+.navjeu{
+  margin: 0; padding: 0; // annulation des marges
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 60px;
+  width: 100%;
 }
-
-
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  float: left;
+  width: 15%;
+  color: white;
+  font-size: 20px;
+  font-family: cursive;
+}
 
 /* Plateau */
 
@@ -115,34 +122,28 @@ figure{
   }
 
 }
-
 #plateau{
   .plateau;
+  margin-top: 100px;
 }
 
-
-
-body{
-  background-image: url("../images/fond2.png");
-  margin: 0;
-  padding: 0;
-  color : white;
+figure{
+  float: left;
+  width: 10%;
 }
 
-.master{
-  background-color:rgba(0, 0, 0, 0.5);
-  min-height: 100vh;
-
+#scores{
+  width: 80%;
+  margin-left: 25%;
 }
 
-footer{
-  height: 15vh;
+.selectionnee{
+  color: #C57C11;
 }
-
-
-
-
-
+#accueil:hover{
+  color: #F4D17B;
+  text-decoration: underline;
+}
 
 
 /*CASES & plateau */
@@ -151,60 +152,20 @@ table{
   text-align: center;
   margin-left: 30%;
 }
-
 td{
   width: 50px;
   height: 50px;
 }
-
-
 
 /* IMAGES */
 img{
   height: 50%;
   width: 50%;
 }
-
 .logo{
   height: @DimLogo;
   width: @DimLogo;
 }
-
 .caseRouge{
   background-color: red;
-}
-
-
-/*ACCUEIL*/
-a{
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-}
-
-#accueil{
-  float: left;
-  margin-left: 10%;
-  width: 50%;
-}
-
-.selectionnee{
-  color: blue;
-}
-
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-nav{
-  background-color: black;
-}
-
-video{
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 8%;
 }
