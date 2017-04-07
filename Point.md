@@ -17,6 +17,11 @@ seulement aux endroits où c'est possible
 ~~Timer~~
 
 #Plus
-une vidéo du jeu est sur la page de présentation et peut se lire (firefox et chrome c'est sûr)'
+une vidéo du jeu est sur la page de présentation et peut se lire (Google chrome)'
 Le site est joli, équilibré au niveau des couleurs et des boutons : magnifique !!! <3
 
+
+
+
+
+ATTENTION !!!!!!!!!!! il faut ouvrir le projet sous Google Chrome
